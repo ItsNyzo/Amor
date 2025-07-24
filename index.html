@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva</title>
+  <style>
+    body {
+      background-color: #ffeef5;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
 
+    h1 {
+      text-align: center;
+      color: #d63384;
+    }
+
+    .malla {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .ramo {
+      background-color: #ffd6e8;
+      border: 2px solid #f3a6c6;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      user-select: none;
+    }
+
+    .ramo:hover {
+      background-color: #ffc1da;
+    }
+
+    .ramo.tachado {
+      text-decoration: line-through;
+      background-color: #e0e0e0;
+      color: gray;
+      border-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Interactiva de Ingeniería</h1>
+  <div class="malla">
+    <div class="ramo">Álgebra</div>
+    <div class="ramo">Cálculo I</div>
+    <div class="ramo">Física I</div>
+    <div class="ramo">Intro. a la Ingeniería</div>
+    <div class="ramo">Programación</div>
+    <div class="ramo">Comunicación</div>
+    <div class="ramo">Economía</div>
+    <div class="ramo">Estadística</div>
+    <!-- Puedes seguir agregando ramos aquí -->
+  </div>
+
+  <script>
+    document.querySelectorAll('.ramo').forEach(ramo => {
+      ramo.addEventListener('click', () => {
+        ramo.classList.toggle('tachado');
+      });
+    });
+  </script>
+</body>
+</html>
