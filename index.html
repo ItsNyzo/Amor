@@ -5,7 +5,7 @@
   <title>Malla Ingeniería Civil Industrial</title>
   <style>
     body {
-      background-color: #ffeef5; /* fondo rosado pastel */
+      background-color: #ffeef5; /* rosado pastel */
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 30px;
@@ -31,21 +31,24 @@
       border-radius: 8px;
     }
 
+    .muro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
     .fila {
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin-bottom: 30px;
-      flex-wrap: nowrap;
     }
 
     .semestre {
-      flex: 1;
-      min-width: 170px;
-      background-color: #f8dada;
-      border: 2px solid #bba6e8;
+      background-color: #ffeef5; /* fondo de cada columna también rosado pastel */
+      border: none;
       padding: 10px;
-      border-radius: 10px;
+      min-width: 180px;
     }
 
     .semestre h2 {
@@ -56,7 +59,7 @@
     }
 
     .ramo {
-      background-color: #d6c3f6;
+      background-color: #d6c3f6; /* morado claro */
       border: 2px solid #bba6e8;
       border-radius: 6px;
       margin-bottom: 8px;
@@ -80,17 +83,10 @@
 
     .mensaje-final {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 20px;
       color: #b05273;
       font-weight: bold;
-    }
-
-    @media (max-width: 1200px) {
-      .fila {
-        overflow-x: scroll;
-        flex-wrap: nowrap;
-      }
     }
   </style>
 </head>
@@ -101,78 +97,81 @@
     <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="gatito tierno">
   </div>
 
-  <!-- Fila superior: Semestres I a V -->
-  <div class="fila">
-    <div class="semestre"><h2>I Semestre</h2>
-      <div class="ramo">Álgebra y Trigonometría</div>
-      <div class="ramo">Cálculo Diferencial</div>
-      <div class="ramo">Física Mecánica</div>
-      <div class="ramo">Química General</div>
-      <div class="ramo">Intro. Ingeniería Industrial</div>
-    </div>
-    <div class="semestre"><h2>II Semestre</h2>
-      <div class="ramo">Álgebra Lineal</div>
-      <div class="ramo">Cálculo Integral</div>
-      <div class="ramo">Electromagnetismo</div>
-      <div class="ramo">Contabilidad y Costos</div>
-      <div class="ramo">Algoritmos y Programación</div>
-    </div>
-    <div class="semestre"><h2>III Semestre</h2>
-      <div class="ramo">Estadística</div>
-      <div class="ramo">Software para Ingeniería</div>
-      <div class="ramo">Ecuaciones Diferenciales</div>
-      <div class="ramo">Optimización Lineal</div>
-      <div class="ramo">Formación Integral</div>
-    </div>
-    <div class="semestre"><h2>IV Semestre</h2>
-      <div class="ramo">Modelamiento de Sistemas</div>
-      <div class="ramo">Cálculo Multivariable</div>
-      <div class="ramo">Mecánica de Sólidos y Fluidos</div>
-      <div class="ramo">Teoría de Sistemas</div>
-      <div class="ramo">Microeconomía</div>
-    </div>
-    <div class="semestre"><h2>V Semestre</h2>
-      <div class="ramo">Inferencia Estadística</div>
-      <div class="ramo">Métodos de Producción</div>
-      <div class="ramo">Gestión Estratégica</div>
-      <div class="ramo">Taller Ciencias Ingeniería</div>
-      <div class="ramo">Electrotecnia</div>
-    </div>
-  </div>
+  <div class="muro">
 
-  <!-- Fila inferior: Semestres VI a X -->
-  <div class="fila">
-    <div class="semestre"><h2>VI Semestre</h2>
-      <div class="ramo">Termodinámica</div>
-      <div class="ramo">Comportamiento Organizacional</div>
-      <div class="ramo">Finanzas</div>
-      <div class="ramo">Evaluación de Proyectos</div>
-      <div class="ramo">Gestión de Servicios</div>
+    <!-- Fila superior: I a V semestre -->
+    <div class="fila">
+      <div class="semestre"><h2>I Semestre</h2>
+        <div class="ramo">Álgebra y Trigonometría</div>
+        <div class="ramo">Cálculo Diferencial</div>
+        <div class="ramo">Física Mecánica</div>
+        <div class="ramo">Química General</div>
+        <div class="ramo">Intro. Ingeniería Industrial</div>
+      </div>
+      <div class="semestre"><h2>II Semestre</h2>
+        <div class="ramo">Álgebra Lineal</div>
+        <div class="ramo">Cálculo Integral</div>
+        <div class="ramo">Electromagnetismo</div>
+        <div class="ramo">Contabilidad y Costos</div>
+        <div class="ramo">Algoritmos y Programación</div>
+      </div>
+      <div class="semestre"><h2>III Semestre</h2>
+        <div class="ramo">Estadística</div>
+        <div class="ramo">Software para Ingeniería</div>
+        <div class="ramo">Ecuaciones Diferenciales</div>
+        <div class="ramo">Optimización Lineal</div>
+        <div class="ramo">Formación Integral</div>
+      </div>
+      <div class="semestre"><h2>IV Semestre</h2>
+        <div class="ramo">Modelamiento de Sistemas</div>
+        <div class="ramo">Cálculo Multivariable</div>
+        <div class="ramo">Mecánica de Sólidos y Fluidos</div>
+        <div class="ramo">Teoría de Sistemas</div>
+        <div class="ramo">Microeconomía</div>
+      </div>
+      <div class="semestre"><h2>V Semestre</h2>
+        <div class="ramo">Inferencia Estadística</div>
+        <div class="ramo">Métodos de Producción</div>
+        <div class="ramo">Gestión Estratégica</div>
+        <div class="ramo">Taller Ciencias Ingeniería</div>
+        <div class="ramo">Electrotecnia</div>
+      </div>
     </div>
-    <div class="semestre"><h2>VII Semestre</h2>
-      <div class="ramo">Gestión de la Innovación</div>
-      <div class="ramo">Marketing</div>
-      <div class="ramo">Optimización No Lineal</div>
-      <div class="ramo">Taller Sistemas Productivos</div>
-      <div class="ramo">Práctica Profesional I</div>
-    </div>
-    <div class="semestre"><h2>VIII Semestre</h2>
-      <div class="ramo">Logística Integral</div>
-      <div class="ramo">Simulación de Procesos</div>
-      <div class="ramo">Formulación de Proyectos</div>
-      <div class="ramo">Electivo Profesional I</div>
-      <div class="ramo">Electivo Profesional II</div>
-    </div>
-    <div class="semestre"><h2>IX Semestre</h2>
-      <div class="ramo">Electivo Profesional III</div>
-      <div class="ramo">Electivo Profesional IV</div>
-      <div class="ramo">Electivo Profesional V</div>
-      <div class="ramo">Taller Proyecto Emprendimiento</div>
-      <div class="ramo">Práctica Profesional II</div>
-    </div>
-    <div class="semestre"><h2>X Semestre</h2>
-      <div class="ramo">Seminario de Titulación</div>
-      <div class="ramo">Inclusión al Ambiente Laboral</div>
+
+    <!-- Fila inferior: VI a X semestre -->
+    <div class="fila">
+      <div class="semestre"><h2>VI Semestre</h2>
+        <div class="ramo">Termodinámica</div>
+        <div class="ramo">Comportamiento Organizacional</div>
+        <div class="ramo">Finanzas</div>
+        <div class="ramo">Evaluación de Proyectos</div>
+        <div class="ramo">Gestión de Servicios</div>
+      </div>
+      <div class="semestre"><h2>VII Semestre</h2>
+        <div class="ramo">Gestión de la Innovación</div>
+        <div class="ramo">Marketing</div>
+        <div class="ramo">Optimización No Lineal</div>
+        <div class="ramo">Taller Sistemas Productivos</div>
+        <div class="ramo">Práctica Profesional I</div>
+      </div>
+      <div class="semestre"><h2>VIII Semestre</h2>
+        <div class="ramo">Logística Integral</div>
+        <div class="ramo">Simulación de Procesos</div>
+        <div class="ramo">Formulación de Proyectos</div>
+        <div class="ramo">Electivo Profesional I</div>
+        <div class="ramo">Electivo Profesional II</div>
+      </div>
+      <div class="semestre"><h2>IX Semestre</h2>
+        <div class="ramo">Electivo Profesional III</div>
+        <div class="ramo">Electivo Profesional IV</div>
+        <div class="ramo">Electivo Profesional V</div>
+        <div class="ramo">Taller Proyecto Emprendimiento</div>
+        <div class="ramo">Práctica Profesional II</div>
+      </div>
+      <div class="semestre"><h2>X Semestre</h2>
+        <div class="ramo">Seminario de Titulación</div>
+        <div class="ramo">Inclusión al Ambiente Laboral</div>
+      </div>
     </div>
   </div>
 
