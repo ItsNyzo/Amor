@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Ingeniería Civil Industrial - UBB</title>
+  <title>Malla Ingeniería Civil Industrial</title>
   <style>
     body {
-      background-color: #f4c2c2; /* fondo rosado palo */
+      background-color: #f4c2c2;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
       padding: 30px;
     }
 
@@ -15,13 +16,13 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .titulo h1 {
       color: #b05273;
-      margin: 0;
       font-size: 28px;
+      margin: 0;
     }
 
     .titulo img {
@@ -30,34 +31,36 @@
       border-radius: 8px;
     }
 
-    .contenedor-malla {
-      display: grid;
-      grid-template-columns: repeat(10, minmax(180px, 1fr));
-      gap: 20px;
-      overflow-x: auto;
+    .tabla-malla {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: nowrap;
+      overflow: hidden;
     }
 
     .semestre {
+      flex: 1;
+      min-width: 170px;
       background-color: #f8dada;
       border: 2px solid #bba6e8;
       padding: 10px;
       border-radius: 10px;
-      min-width: 180px;
     }
 
     .semestre h2 {
       text-align: center;
-      color: #b05273;
       font-size: 16px;
+      color: #b05273;
       margin-bottom: 10px;
     }
 
     .ramo {
       background-color: #d6c3f6;
       border: 2px solid #bba6e8;
-      padding: 8px;
-      margin-bottom: 8px;
       border-radius: 6px;
+      margin-bottom: 8px;
+      padding: 8px;
       text-align: center;
       cursor: pointer;
       user-select: none;
@@ -65,22 +68,30 @@
     }
 
     .ramo:hover {
-      background-color: #c6b0f0;
+      background-color: #cbb0f0;
     }
 
     .ramo.tachado {
-      text-decoration: line-through;
       background-color: #dcdcdc;
       color: gray;
+      text-decoration: line-through;
       border-color: gray;
     }
 
     .mensaje-final {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 20px;
       color: #b05273;
       font-weight: bold;
+    }
+
+    /* Adaptación para pantallas pequeñas (opcional) */
+    @media (max-width: 1200px) {
+      .tabla-malla {
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+      }
     }
   </style>
 </head>
@@ -91,13 +102,13 @@
     <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="gatito tierno">
   </div>
 
-  <div class="contenedor-malla">
+  <div class="tabla-malla">
     <div class="semestre"><h2>I Semestre</h2>
       <div class="ramo">Álgebra y Trigonometría</div>
       <div class="ramo">Cálculo Diferencial</div>
       <div class="ramo">Física Mecánica</div>
       <div class="ramo">Química General</div>
-      <div class="ramo">Intro. Ingeniería Industrial</div>
+      <div class="ramo">Intro. a la Ingeniería Industrial</div>
     </div>
 
     <div class="semestre"><h2>II Semestre</h2>
@@ -151,7 +162,7 @@
     <div class="semestre"><h2>VIII Semestre</h2>
       <div class="ramo">Logística Integral</div>
       <div class="ramo">Simulación de Procesos</div>
-      <div class="ramo">Formulación Proyectos</div>
+      <div class="ramo">Formulación de Proyectos</div>
       <div class="ramo">Electivo Profesional I</div>
       <div class="ramo">Electivo Profesional II</div>
     </div>
@@ -171,9 +182,11 @@
   </div>
 
   <script>
-    document.querySelectorAll('.ramo').forEach(r => {
-      r.addEventListener('click', () => r.classList.toggle('tachado'));
-    });
+    document.querySelectorAll('.ramo').forEach(el =>
+      el.addEventListener('click', () =>
+        el.classList.toggle('tachado')
+      )
+    );
   </script>
 
   <div class="mensaje-final">
